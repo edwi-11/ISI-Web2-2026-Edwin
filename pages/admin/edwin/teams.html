@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Teams</title>
+    <link rel="stylesheet" href="teams.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <section class="panel">
+        <h1>Administrar Teams</h1>
+
+        <form id="frmTeam">
+            <input type="hidden" id="teamCode">
+
+            <label>Nombre del Team</label>
+            <input type="text" id="txtName" required>
+
+            <label>Descripción</label>
+            <textarea id="txtDescription"></textarea>
+
+            <div class="group-btn">
+                <button type="submit" id="btnSave">Guardar</button>
+                <button type="button" id="btnCancel">Limpiar</button>
+            </div>
+
+            <small id="lblInfo"></small>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Equipos Registrados</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Team</th>
+                    <th>Detalle</th>
+                    <th>Integrantes</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="dataTeams">
+                <tr>
+                    <td colspan="5">Consultando información...</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script type="module" src="teams.js"></script>
+
+</body>
+</html>

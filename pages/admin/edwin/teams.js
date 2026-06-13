@@ -89,7 +89,7 @@ formTeam.addEventListener("submit", async e => {
     try {
 
         if (hiddenId.value) {
-            await api.update(hiddenId.value, request);
+           await api.put(`/teams/${hiddenId.value}`, request);
             notify("Registro actualizado");
         } else {
             await api.create(request);
@@ -116,7 +116,7 @@ async function removeTeam(team) {
 
     try {
 
-        await api.delete(team.id);
+        await api.put(`/teams/${hiddenId.value}`, request);
 
         notify("Registro eliminado");
 
